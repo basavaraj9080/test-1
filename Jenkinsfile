@@ -28,8 +28,6 @@ pipeline {
         stage('Containersation'){
             steps{
                 sh '''
-                    docker stop c1
-                    docker rm c1
                     docker run -it -d --name c1 -p 9002:8080 basavaraj8090/project:1
                 '''
             }
